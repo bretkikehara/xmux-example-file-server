@@ -47,8 +47,8 @@ func main() {
 	mux := xmux.New()
 
 	// serve static assets
-	serverHandler := http.FileServer(http.Dir("./"))
-	mux.Handle("GET", "/*filepath", serverHandler)
+	staticHandler := http.FileServer(http.Dir("./"))
+	mux.Handle("GET", "/*filepath", staticHandler)
 
 	port := getPort()
 
