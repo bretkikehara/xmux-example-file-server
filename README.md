@@ -12,3 +12,11 @@ Install this repository into your `$GOPATH`.
 	$ cd $GOPATH/src/github.com/bretkikehara/xmux-example-file-server
 	$ go run main.go
 ```
+
+### Override port
+
+The port can be overridden using the `PORT` environment variable.
+
+```sh
+	$ PORT=8081 go run main.go
+```
