@@ -24,10 +24,8 @@ func (h ExampleLogger) ServeHTTPC(ctx context.Context, w http.ResponseWriter, r 
 }
 
 func getPort() int {
-	if port := os.Getenv("PORT"); port != "" {
-		if parsed, err := strconv.Atoi(port); err == nil {
-			return parsed
-		}
+	if port, err := strconv.Atoi(os.Getenv("PORT")); err == nil {
+		return port
 	}
 	return 8080
 }
